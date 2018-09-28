@@ -1,0 +1,30 @@
+<div class="show-post">
+  <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true) %>
+  <%= markdown.render(@post.content).html_safe %>
+</div>
+
+<br>
+
+<div class="text-center">
+  <a class='copy-text'>Click here to copy post URL</a>
+  <input type="text" class="url-to-copy" value="<%= post_url(@post) %>">
+  <div class="alert alert-info" role="alert" style="display: none">
+    URL Copied
+  </div>
+
+
+  <div style="margin-top: 20px">
+    <%= link_to 'Create A Post', new_post_path, class: 'btn btn-lg btn-info' %>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $('.copy-text').click(function(e) {
+      e.preventDefault();
+      $('.url-to-copy').select();
+      document.execCommand("copy");
+      $('.alert-info').show().fadeOut(3000);
+    })
+  })
+</script>

@@ -12,4 +12,17 @@
  *
  *= require_tree .
  *= require_self
+ *= require md_simple_editor
  */
+
+ .show-post {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #FFF;
+ }
+
+ .url-to-copy {
+  position: absolute;
+  left: -1000px;
+  top: -1000px
+ }

@@ -1,0 +1,13 @@
+<h1>Write something</h1>
+<br>
+<%= form_for @post do |f| %>
+  <div class="form-group">
+    <%= md_simple_editor  do %>
+      <%= f.text_area :content, class: 'form-control', rows: 10 %>
+    <% end %>
+  </div>
+  <br>
+  <div class="text-center">
+    <%= f.submit class: 'btn btn-lg btn-info' %>
+  </div>
+<% end %>

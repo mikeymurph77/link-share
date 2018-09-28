@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LinkShare</title>
+    <title>Quick Posts</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah" rel="stylesheet">
 
-  <body>
-    <%= yield %>
+  </head>
+  <body style='background-color: #f1f1f1'>
+    <div class="container">
+      <header class="text-center">
+        <h1 style="margin-bottom: -20px; font-family: 'Gloria Hallelujah', cursive;">Quick Posts</h1>
+        <h3 style="font-family: 'Amatic SC', cursive;">Write quick anonymous notes to share</h3>
+      </header>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
